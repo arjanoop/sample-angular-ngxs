@@ -2,7 +2,9 @@ import {Action, Selector, State, StateContext} from "@ngxs/store";
 import {AppStateModel, User} from "./models";
 import {FbState} from "./fb-state/fb.state";
 import {InstaState} from "./insta-state/insta.state";
-import {UpdateUser} from "./app.action";
+import {FetchUser, UpdateUser} from "./app.action";
+import {UserService} from "../service/user.service";
+import {Injectable} from "@angular/core";
 
 
 @State<AppStateModel>({
@@ -11,16 +13,26 @@ import {UpdateUser} from "./app.action";
     user: {
       name: '',
       email: '',
-      id: '',
       gender: '',
       age: 0,
     },},
   children: [FbState, InstaState],
 })
+@Injectable()
 export class AppState {
+
+  constructor(private userService: UserService) {
+  }
   @Selector()
   static getUser(state: AppStateModel): User {
     return state.user;
+  }
+
+  @Action(FetchUser)
+  fetchUser(ctx: StateContext<AppStateModel>,) {
+    this.userService.fetchUserData().subscribe((user)=>{
+      ctx.patchState({user});
+    });
   }
 
   @Action(UpdateUser)

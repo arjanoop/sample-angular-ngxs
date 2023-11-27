@@ -1,6 +1,7 @@
 import { State, Action, StateContext, Selector } from '@ngxs/store';
 import {InstaStateModel} from "./model";
 import {UpdateInstaUser} from "./insta.action";
+import {Injectable} from "@angular/core";
 
 
 @State<InstaStateModel>({
@@ -10,8 +11,9 @@ import {UpdateInstaUser} from "./insta.action";
     posts: 0,
   },
 })
-export class InstaState {
 
+@Injectable()
+export class InstaState {
 
   @Selector()
   static getFollowers(state: InstaStateModel): number {

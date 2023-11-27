@@ -1,0 +1,30 @@
+.profile-info {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #3498db;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.1);
+  margin-top: 20px;
+}
+
+.profile-info h2 {
+  color: #3498db;
+}
+
+.profile-info p {
+  margin: 10px 0;
+}
+
+.profile-info button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-info button:hover {
+  background-color: #2980b9;
+}

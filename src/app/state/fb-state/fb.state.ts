@@ -1,6 +1,7 @@
 import { State, Action, StateContext, Selector } from '@ngxs/store';
 import {FbStateModel} from "./model";
 import {UpdateFbUser} from "./fb.action";
+import {Injectable} from "@angular/core";
 
 
 @State<FbStateModel>({
@@ -10,6 +11,8 @@ import {UpdateFbUser} from "./fb.action";
     posts: 0,
   },
 })
+
+@Injectable()
 export class FbState {
 
   @Selector()
