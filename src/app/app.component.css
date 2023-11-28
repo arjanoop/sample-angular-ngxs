@@ -2,13 +2,17 @@
   max-width: 600px;
   margin: auto;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #27ae60; /* Set your new frame color here */
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .profile-info {
   margin-top: 20px;
+}
+
+.user-profile h1 {
+  color: #218c53;
 }
 
 .profile-info p {
@@ -21,4 +25,14 @@
 
 .profile-buttons button {
   margin-right: 10px;
+  background-color: #27ae60; /* Set your new button color here */
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-buttons button:hover {
+  background-color: #218c53; /* Set your new button hover color here */
 }
