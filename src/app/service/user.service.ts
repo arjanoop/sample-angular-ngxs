@@ -20,7 +20,7 @@ export class UserService {
     }
 
     public fetchUserInstaData(emailId: string): Observable<InstaStateModel> {
-        // return of({followers: 97, posts: 56});
-        return throwError("Error");
+        return of({followers: 97, posts: 56});
+        // return throwError("Error");
     }
 }
