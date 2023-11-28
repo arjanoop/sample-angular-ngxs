@@ -1,7 +1,9 @@
 import FbStateModel from "./model/fb-state-model.interface";
 
 
-export class UpdateFbUser {
-  static readonly type = '[FB] Update User';
-  constructor(public payload: FbStateModel) {}
+export class UpdateFbUserDataAnalysis {
+    static readonly type = '[FB] Update User\'s data analysis';
+
+    constructor(public emailId: string) {
+    }
 }

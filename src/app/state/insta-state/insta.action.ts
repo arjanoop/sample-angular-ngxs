@@ -1,6 +1,8 @@
 import InstaStateModel from "./model/Insta-state-model.interface";
 
-export class UpdateInstaUser {
-  static readonly type = '[Insta] Update User';
-  constructor(public payload: InstaStateModel) {}
+export class UpdateInstaUserDataAnalysis {
+    static readonly type = '[Insta] Update User\'s data analysis';
+
+    constructor(public emailId: string) {
+    }
 }

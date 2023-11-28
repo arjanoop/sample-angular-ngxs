@@ -28,6 +28,11 @@ export class AppState {
     return state.user;
   }
 
+  @Selector()
+  static getEmailId(state: AppStateModel): string {
+    return state.user.email;
+  }
+
   @Action(FetchUser)
   fetchUser(ctx: StateContext<AppStateModel>,) {
     this.userService.fetchUserData().subscribe((user)=>{
